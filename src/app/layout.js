@@ -1,4 +1,5 @@
 import MainPage from "./MainPage";
+import "./globals.css";
 
 export const metadata = {
   title: "Welcome to HParkar`s Portfolio",
@@ -6,5 +7,11 @@ export const metadata = {
 };
 
 export default function App({ children }) {
-  return <MainPage />;
+  return (
+    <html>
+      <body>
+        <MainPage />;
+      </body>
+    </html>
+  );
 }
