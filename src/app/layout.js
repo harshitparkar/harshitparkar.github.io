@@ -13,7 +13,6 @@ export default function App({ children }) {
     <html>
       <body>
         <Provider>
-          <ThemeSwitcher />
           <MainPage />
         </Provider>
       </body>
