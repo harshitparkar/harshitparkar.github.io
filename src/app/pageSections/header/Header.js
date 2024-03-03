@@ -1,7 +1,14 @@
+/**
+ * Enables the React 18 Server Components feature.
+ * This allows using React Server Components.
+ */
+"use client";
 export default function Header() {
   return (
     <div>
-      <h2>This is Header</h2>
+      <h1 className="text-3xl font-bold underline bg-slate-600">
+        Hello world!
+      </h1>
     </div>
   );
 }

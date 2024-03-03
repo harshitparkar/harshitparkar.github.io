@@ -9,4 +9,7 @@
     max-width: 100vw;
     overflow-x: hidden;
   }
-
+[data-theme="dark"] body{
+  background-color: black;
+  color: white;
+}

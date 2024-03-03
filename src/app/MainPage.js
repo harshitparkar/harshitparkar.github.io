@@ -3,9 +3,8 @@ import Header from "./pageSections/header/Header";
 
 export default function MainPage() {
   return (
-    <main>
-      <Header />
-      <Footer />
-    </main>
+    <div>
+      <h1>Hello World !</h1>
+    </div>
   );
 }
