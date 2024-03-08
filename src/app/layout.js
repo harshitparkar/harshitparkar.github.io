@@ -1,5 +1,4 @@
 import MainPage from "./MainPage";
-import ThemeSwitcher from "./ThemeSwitcher";
 import "./globals.css";
 import Provider from "./provider";
 

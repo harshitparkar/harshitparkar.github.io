@@ -7,7 +7,6 @@ export default function MainPage() {
     <div>
       <Header />
       <Footer />
-      <ThemeSwitcher />
     </div>
   );
 }

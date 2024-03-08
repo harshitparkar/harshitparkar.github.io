@@ -1,14 +1,23 @@
-/**
- * Enables the React 18 Server Components feature.
- * This allows using React Server Components.
- */
 "use client";
+import ThemeSwitcher from "@/app/ThemeSwitcher";
+import BrandIcon from "@/app/universal_Components/BrandImage";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+
 export default function Header() {
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null; // Don't render anything until theme is mounted
+
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline bg-slate-600">
-        Hello world!
-      </h1>
+    <div className="flex flex-row justify-between mx-6">
+      <BrandIcon />
+      <ThemeSwitcher />
     </div>
   );
 }
