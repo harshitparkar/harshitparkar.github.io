@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { FaRegSun } from "react-icons/fa6";
 import { MdModeNight } from "react-icons/md";
 import themeSwitchStyle from "./theme.module.css";
-import { AppConstants } from "./utils/AppConstant";
+import { AppConstants } from "../../../utils/AppConstant";
 
 export default function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
