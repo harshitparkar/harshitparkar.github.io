@@ -9,12 +9,11 @@ export const metadata = {
 
 export default function App({ children }) {
   return (
-    <html>
-      <body>
-        {/* <Provider> */}
-        <MainPage />
-        {/* </Provider> */}
-      </body>
-    </html>
+    <main>
+      <Provider>
+        {/* <MainPage /> */}
+        <h1>Hello World</h1>
+      </Provider>
+    </main>
   );
 }
