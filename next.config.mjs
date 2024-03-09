@@ -4,5 +4,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  basePath: "/harshitparkar.github.io", // Replace with your actual repository name
+  assetPrefix: "/harshitparkar.github.io/", // Replace with your actual repository name
 };
 export default nextConfig;
