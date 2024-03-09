@@ -11,9 +11,9 @@ export default function App({ children }) {
   return (
     <html>
       <body>
-        {/* <Provider> */}
-        <MainPage />
-        {/* </Provider> */}
+        <Provider>
+          <MainPage />
+        </Provider>
       </body>
     </html>
   );
