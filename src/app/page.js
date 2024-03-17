@@ -12,9 +12,7 @@ export default function Home() {
             alignItems: "center",
           }}
         >
-          <h2 className={styles.card}>
-            Hi there! Greeting from {"< "}Harshit Parkar{" />"}
-          </h2>
+          <h2 className={styles.card}>Performing Live Changes</h2>
           <p className={styles.description}>
             This is my portfolio website. Currently, it is under development.
             Stay tuned for updates.
