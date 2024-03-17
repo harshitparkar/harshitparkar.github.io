@@ -2,10 +2,9 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { FaRegSun } from "react-icons/fa6";
-import { MdModeNight } from "react-icons/md";
-import themeSwitchStyle from "./theme.module.css";
+import { MdModeNight, MdOutlineWbSunny } from "react-icons/md";
 import { AppConstants } from "../../../utils/AppConstant";
+import themeSwitchStyle from "./theme.module.css";
 
 export default function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
@@ -31,7 +30,7 @@ export default function ThemeSwitcher() {
   return (
     <div className="flex flex-row items-center">
       {theme === AppConstants.DARK_THEME ? (
-        <FaRegSun
+        <MdOutlineWbSunny
           size={themeChangeIconSize}
           onClick={() => onClickSun()}
           className={themeSwitchStyle.icon}
