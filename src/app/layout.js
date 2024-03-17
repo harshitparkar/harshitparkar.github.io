@@ -1,4 +1,5 @@
 import "./globals.css";
+import Home from "./page";
 import Provider from "./provider";
 
 export const metadata = {
@@ -10,7 +11,9 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <body>
-        <Provider>{children}</Provider>
+        <Provider>
+          <Home />
+        </Provider>
       </body>
     </html>
   );
