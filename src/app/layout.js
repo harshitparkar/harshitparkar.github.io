@@ -1,4 +1,5 @@
 import "./globals.css";
+import Provider from "./provider";
 
 export const metadata = {
   title: "Welcome to H.Parkar's Portfolio",
@@ -8,7 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html>
-      <body>{children}</body>
+      <body>
+        <Provider>{children}</Provider>
+      </body>
     </html>
   );
 }
