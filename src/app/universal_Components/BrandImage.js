@@ -16,7 +16,7 @@ export default function BrandIcon({ fill }) {
 
   return (
     <Image
-      src="/BrandIcon.png" // Replace with the actual path to your image
+      src="/BrandIcon2.png" // Replace with the actual path to your image
       alt="Brand Icon"
       width={fill} // Set your desired width
       height={fill} // Set your desired height
