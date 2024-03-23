@@ -16,13 +16,34 @@ export default function ThemeSwitcher() {
     setMounted(true);
   }, []);
 
+  /**
+   * Sets the theme to the dark theme constant on mount.
+   * Uses the setTheme hook to update the theme.
+   */
+  useEffect(() => {
+    setTheme(AppConstants.DARK_THEME);
+  }, [setTheme]);
+
+  /**
+   * Returns null if the component is not yet mounted.
+   * This prevents trying to render the UI before it is ready.
+   */
   if (!mounted) {
     return null;
   }
 
+  /**
+   * Sets the theme to the light theme constant.
+   * Uses the setTheme hook to update the theme.
+   */
   const onClickSun = () => {
     setTheme(AppConstants.LIGHT_THEME);
   };
+
+  /**
+   * Sets the theme to the dark theme constant.
+   * Uses the setTheme hook to update the theme.
+   */
   const onClickMoon = () => {
     setTheme(AppConstants.DARK_THEME);
   };
