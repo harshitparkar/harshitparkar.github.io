@@ -54,13 +54,13 @@ export default function ThemeSwitcher() {
         <MdOutlineWbSunny
           size={themeChangeIconSize}
           onClick={() => onClickSun()}
-          className={themeSwitchStyle.icon}
+          className={`${themeSwitchStyle.sun}`}
         />
       ) : (
         <MdModeNight
           size={themeChangeIconSize}
           onClick={() => onClickMoon()}
-          className={themeSwitchStyle.icon}
+          className={`${themeSwitchStyle.moon}`}
         />
       )}
     </div>
