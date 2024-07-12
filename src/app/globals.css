@@ -13,4 +13,15 @@
     max-width: 100vw;
     overflow-x: hidden;
   }
-  
+ 
+:root {
+  --text-color: black;
+  --underline-color: black;
+}
+
+.dark {
+  --text-color: white;
+  --underline-color: white;
+}
+
+
