@@ -3,7 +3,7 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { MdModeNight, MdOutlineWbSunny } from "react-icons/md";
-import { AppConstants } from "../../../utils/AppConstant";
+import { AppConstants } from "../../../../utils/AppConstant";
 import themeSwitchStyle from "./theme.module.css";
 
 export default function ThemeSwitcher() {

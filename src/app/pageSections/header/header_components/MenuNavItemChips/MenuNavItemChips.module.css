@@ -1,0 +1,38 @@
+/* MenuNavItemChips.module.css */
+.navBarItem {
+  position: relative;
+  margin-inline: 15px;
+}
+
+.navLink {
+  font-weight:600;
+}
+
+.navLink::before {
+  content: '';
+  top: 25px;
+  transform: translateY(100%);
+  bottom: 50px;
+  width: 100%;
+  height: 0.1rem;
+  background-color: var(--underline-color);
+  left: -100%;
+}
+
+.navLink:hover::before {
+  animation: navLine 0.4s linear forwards;
+  position: absolute;
+   
+}
+
+@keyframes navLine {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 10%;
+  }
+  100% {
+    left: 0%;
+  }
+}
