@@ -1,0 +1,7 @@
+.image_Black{
+    filter:brightness(0) invert(1);
+}
+
+.image_White{
+    filter:brightness(0) invert(0);
+}

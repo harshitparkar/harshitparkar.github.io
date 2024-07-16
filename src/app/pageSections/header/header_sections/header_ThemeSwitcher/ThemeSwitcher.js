@@ -49,7 +49,7 @@ export default function ThemeSwitcher() {
   };
 
   return (
-    <div className="flex flex-row items-center">
+    <div>
       {theme === AppConstants.DARK_THEME ? (
         <MdOutlineWbSunny
           size={themeChangeIconSize}

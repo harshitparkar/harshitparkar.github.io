@@ -15,13 +15,15 @@
   }
  
 :root {
-  --text-color: black;
-  --underline-color: black;
+  --theme-color:white;
+  --theme-inverted-color:black;
+  background-color: var(--theme-color);
 }
 
 .dark {
-  --text-color: white;
-  --underline-color: white;
+  --theme-color: black;
+  --theme-inverted-color:white;
+  background-color: var(--theme-color)
 }
 
 
