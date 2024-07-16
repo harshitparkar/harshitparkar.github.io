@@ -1,0 +1,33 @@
+.customCursorSection {
+  width: 100%;
+  height: 100%;
+  cursor: none; /* Hide default cursor in this section */
+}
+
+.customCursor {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color:var(--underline-color);
+  position: absolute;
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0s ease;
+}
+
+.customCursorBorder{
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--underline-color);
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  z-index: 9998;
+  transition: all 0.9s ease;
+  transform: translate(-35%, -35%);
+}
+
+
+
