@@ -33,10 +33,7 @@ const CustomCursor = ({ children }) => {
   }, []);
 
   return (
-    <div
-      ref={sectionRef}
-      className={`${styles.customCursorSection} relative overflow-hidden`}
-    >
+    <div ref={sectionRef} className={`${styles.customCursorSection}`}>
       {isVisible && (
         <>
           <div
