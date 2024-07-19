@@ -16,7 +16,7 @@ export default function Header() {
   if (!mounted) return null; // Don't render anything until theme is mounted
 
   return (
-    <div className={`${styles.mainContainer}`}>
+    <header className={`${styles.mainContainer}`}>
       <div className={`${styles.leftContainer}`}>
         <BrandIcon fill={50} />
         <MenuNavBar />
@@ -26,6 +26,6 @@ export default function Header() {
         <RecruitmentStatus getting_recruited={false} />
         <ThemeSwitcher />
       </div>
-    </div>
+    </header>
   );
 }

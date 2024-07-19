@@ -12,7 +12,7 @@ export default function ContentMainPage() {
         <div>
           Work in progress...... <br />
         </div>
-        <div>Latest work: Mouse animation & Project Clean up</div>
+        <div>Latest work: Glass top-header</div>
       </div>
     </CustomCursor>
   );
