@@ -1,10 +1,18 @@
 .mainContainer{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     padding-top: 5px;
     padding-bottom: 5px;
     align-items: center;
     padding-inline: 1%;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.096);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow:var(--theme-inverted-shadow);
 }
 
 .leftContainer{
@@ -15,4 +23,5 @@
 .rightContainer{
     display: flex;
     align-items: center;
-}
+} 
+
