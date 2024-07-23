@@ -1,8 +1,8 @@
 {
   "name": "Harshit S. Parkar's Portfolio",
   "short_name": "HSP Portfolio",
-  "theme_color": "#FFFFFF",
-  "background_color": "#FFFFFF",
+  "theme_color": "#000000",
+  "background_color": "#000000",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
