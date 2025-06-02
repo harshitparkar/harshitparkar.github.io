@@ -6,14 +6,14 @@ import styles from "./ContentMainPage.module.css";
 
 export default function ContentMainPage() {
   return (
-    <CustomCursor>
-      <div className={`${styles.mainContainer}`}>
-        <BrandIcon fill={400} />
-        <div>
-          Work in progress...... <br />
-        </div>
-        <div>Latest work: Develop PWA</div>
+    <div className={styles.mainContainer}>
+      <div className={styles.introText}>
+        <h1>Hi, I’m Harshit Parkar </h1>
+        <h3>A React Native Developer building seamless mobile experiences.
+          With 5+ years of crafting apps that scale, I blend design, performance, and business logic to deliver digital products that work beautifully. Let’s build something impactful together.
+        </h3>
       </div>
-    </CustomCursor>
+      <BrandIcon fill={350} />
+    </div>
   );
 }

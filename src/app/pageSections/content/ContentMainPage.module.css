@@ -1,8 +1,12 @@
 .mainContainer{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 50%;
-    padding-bottom: 50%;
+    padding-top: 7%;
+    padding-inline:5%;
+}
+
+.introText{
+    width: 50%;
 }
