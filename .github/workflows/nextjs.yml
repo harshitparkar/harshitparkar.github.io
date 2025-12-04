@@ -32,7 +32,6 @@ jobs:
           elif [ -f "${{ github.workspace }}/package.json" ]; then
             echo "manager=npm" >> $GITHUB_OUTPUT
             echo "command=ci" >> $GITHUB_OUTPUT
-            # we'll use npx for running next commands
             echo "runner=npx --no-install" >> $GITHUB_OUTPUT
             exit 0
           else
@@ -48,9 +47,6 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        # Optional: uncomment the next line if you want configure-pages to inject next-specific settings automatically
-        # with:
-        #   static_site_generator: next
 
       - name: Restore cache
         uses: actions/cache@v4
@@ -64,12 +60,8 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
-      - name: Build with Next.js
+      - name: Build with Next.js (produces ./out when output: 'export' is set)
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
-
-      - name: Static HTML export with Next.js
-        # IMPORTANT: next export creates ./out — GitHub Pages will serve files from this folder
-        run: ${{ steps.detect-package-manager.outputs.runner }} next export
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
