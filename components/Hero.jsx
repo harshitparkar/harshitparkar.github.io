@@ -8,12 +8,12 @@ export default function Hero({ onNav }) {
     <section className="max-w-6xl mx-auto section-pad relative">
       <div className="absolute inset-0 -z-10"><ParticleField /></div>
       <div className="text-center max-w-4xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6 animate-pulse">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-divider mb-6 animate-pulse">
           <span className="w-2 h-2 bg-green-400 rounded-full animate-ping"></span>
-          <span className="text-sm text-slate-300">Available for new opportunities</span>
+          <span className="text-sm text-secondary">Available for new opportunities</span>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-primary">
           Designing delightful mobile{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-indigo-500 animate-gradient">
             experiences
@@ -22,7 +22,7 @@ export default function Hero({ onNav }) {
           & product-first code
         </h1>
 
-        <p className="mt-6 text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+        <p className="mt-6 text-lg md:text-xl text-secondary max-w-3xl mx-auto leading-relaxed">
           I build high-performance React Native apps and beautiful web frontends in Next.js.
           I focus on scalability, animations, and product thinking — shipping features that users love.
         </p>
@@ -38,7 +38,7 @@ export default function Hero({ onNav }) {
           <a
             href="/Harshit_Parkar_Resume.pdf"
             download
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass border border-white/20 font-medium text-lg shadow hover:bg-white/10 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass border border-divider font-medium text-lg shadow hover:bg-button-hover transition-all duration-300 text-primary"
           >
             Download Resume
           </a>
