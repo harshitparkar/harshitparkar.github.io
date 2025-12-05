@@ -22,17 +22,17 @@ export default function Header({ onNav }) {
     } else {
       window.location.hash = id;
     }
-
   }
 
-  const items = ['home', 'about', 'tech', 'worked-with', 'projects', 'contact'];
+  const items = ['home', 'about', 'worked-with', 'tech', 'projects', 'contact'];
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 backdrop-blur-md bg-black/30 border-b border-white/6">
       <div
-        className="max-w-6xl mx-auto px-6 h-18 flex items-center justify-between"
+        className="max-w-full mx-auto px-4 h-18 flex items-center justify-between"
         style={{ height: 72 }}
       >
+        {/* Name on the left */}
         <div>
           <h1 className="text-xl font-semibold tracking-tight">
             Harshit S. Parkar
