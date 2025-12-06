@@ -13,14 +13,14 @@ export default function LogoCarousel() {
   return (
     <div className="w-full">
       <div className="overflow-hidden">
-        <div className="flex gap-10 items-center animate-marquee py-4">
+        <div className="flex gap-10 items-center animate-marquee py-2">
           {display.map((l, i) => (
-            <a key={i} href={l.href} target="_blank" rel="noreferrer" className="flex items-center justify-center p-6 rounded-xl glass border border-divider hover:bg-button-hover transition-colors duration-200 min-w-max">
+            <a key={i} href={l.href} target="_blank" rel="noreferrer" className="flex items-center justify-center p-4 min-w-max transition-all duration-300 opacity-50 blur-[0.5px] hover:opacity-100 hover:blur-0 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]">
               <img
                 src={l.src}
                 alt={l.alt}
                 onError={handleImgError}
-                className={`w-32 h-32 object-contain transition-all duration-300 ${theme === 'dark' ? 'brightness-0 invert' : 'brightness-0'
+                className={`w-24 h-24 object-contain transition-all duration-300 ${theme === 'dark' ? 'brightness-0 invert' : 'brightness-0'
                   }`}
               />
             </a>
