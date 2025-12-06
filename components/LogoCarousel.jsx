@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
 import COMPANY_LOGOS from '../data/companyLogos';
+import { useTheme } from '../contexts/ThemeContext';
 
 export default function LogoCarousel() {
+  const { theme } = useTheme();
   // Create 2 identical sets of logos, each repeated 4 times to ensure sufficient width for seamless scrolling
   const set = [...COMPANY_LOGOS, ...COMPANY_LOGOS, ...COMPANY_LOGOS, ...COMPANY_LOGOS];
   const display = [...set, ...set];
@@ -14,7 +16,13 @@ export default function LogoCarousel() {
         <div className="flex gap-10 items-center animate-marquee py-4">
           {display.map((l, i) => (
             <a key={i} href={l.href} target="_blank" rel="noreferrer" className="flex items-center justify-center p-6 rounded-xl glass border border-divider hover:bg-button-hover transition-colors duration-200 min-w-max">
-              <img src={l.src} alt={l.alt} onError={handleImgError} className="w-32 h-32 object-contain" />
+              <img
+                src={l.src}
+                alt={l.alt}
+                onError={handleImgError}
+                className={`w-32 h-32 object-contain transition-all duration-300 ${theme === 'dark' ? 'brightness-0 invert' : 'brightness-0'
+                  }`}
+              />
             </a>
           ))}
         </div>

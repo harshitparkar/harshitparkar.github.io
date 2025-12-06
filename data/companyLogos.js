@@ -6,7 +6,7 @@ const COMPANY_LOGOS = [
   },
   {
     "href": "https://www.artofliving.org",
-    "src": "/assets/artofliving.jpg",
+    "src": "/assets/artofliving.png",
     "alt": "Art of Living"
   },
   {
