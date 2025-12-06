@@ -11,7 +11,7 @@ export default function LogoCarousel() {
       <div className="overflow-hidden">
         <div className="flex gap-6 items-center animate-marquee py-2">
           {display.map((l, i) => (
-            <a key={i} href={l.href} target="_blank" rel="noreferrer" className="flex items-center justify-center p-2 rounded-md bg-white/5">
+            <a key={i} href={l.href} target="_blank" rel="noreferrer" className="flex items-center justify-center p-2 rounded-md glass border border-divider hover:bg-button-hover transition-colors duration-200">
               <img src={l.src} alt={l.alt} onError={handleImgError} className="w-20 h-20 object-contain" />
             </a>
           ))}

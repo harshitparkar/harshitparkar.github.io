@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import { ThemeProvider } from '../contexts/ThemeContext'
 
 export const metadata = {
   title: 'Harshit Parkar — Portfolio',
@@ -8,7 +9,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
