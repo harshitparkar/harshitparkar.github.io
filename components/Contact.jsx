@@ -18,7 +18,7 @@ export default function Contact() {
               className="flex items-center gap-4 group p-3 rounded-xl transition-all duration-300 hover:bg-white/5"
             >
               <div className="p-3 rounded-full bg-white/5 group-hover:bg-cyan-500/20 group-hover:scale-110 transition-all duration-300">
-                {item.icon}
+                <item.icon className="w-6 h-6 text-cyan-600 dark:text-cyan-400" />
               </div>
               <div className="flex flex-col">
                 <span className="text-xs text-secondary uppercase tracking-wider font-medium">{item.type}</span>
