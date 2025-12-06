@@ -5,9 +5,9 @@ const COMPANY_LOGOS = [
     "alt": "Tebillion"
   },
   {
-    "href": "https://otsy.com",
-    "src": "/assets/otsy.png",
-    "alt": "Otsy"
+    "href": "https://www.artofliving.org",
+    "src": "/assets/artofliving.jpg",
+    "alt": "Art of Living"
   },
   {
     "href": "https://www.tecogis.com",
@@ -18,6 +18,11 @@ const COMPANY_LOGOS = [
     "href": "https://www.outdoorgoats.com",
     "src": "/assets/outdoorgoats.png",
     "alt": "OutdoorGoats"
+  },
+  {
+    "href": "https://nextgeninvent.com",
+    "src": "/assets/nextgen.png",
+    "alt": "NextGen Invent"
   }
 ];
 export default COMPANY_LOGOS;
