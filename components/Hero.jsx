@@ -3,14 +3,22 @@ import React from 'react';
 import ParticleField from './ParticleField';
 import StatCard from './StatCard';
 
+import { PROFILE_CONFIG } from '../data/profileConfig';
+
 export default function Hero({ onNav }) {
+  const { isAvailable } = PROFILE_CONFIG;
   return (
     <section className="max-w-6xl mx-auto section-pad relative">
       <div className="absolute inset-0 -z-10"><ParticleField /></div>
       <div className="text-center max-w-4xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-divider mb-6 animate-pulse">
-          <span className="w-2 h-2 bg-green-400 rounded-full animate-ping"></span>
-          <span className="text-sm text-secondary">Available for new opportunities</span>
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-divider mb-6 hover:bg-white/5 transition-colors">
+          <span className="relative flex h-2 w-2">
+            <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${isAvailable ? 'bg-green-400' : 'bg-blue-400'}`}></span>
+            <span className={`relative inline-flex rounded-full h-2 w-2 ${isAvailable ? 'bg-green-500' : 'bg-blue-500'}`}></span>
+          </span>
+          <span className="text-sm text-secondary">
+            {isAvailable ? 'Available for new opportunities' : `Currently working with ${PROFILE_CONFIG.currentCompany}`}
+          </span>
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-primary">
@@ -36,7 +44,7 @@ export default function Hero({ onNav }) {
             Let's Work Together
           </a>
           <a
-            href="/Harshit_Parkar_Resume.pdf"
+            href="/assets/Harshit_Parkar_Resume.pdf"
             download
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass border border-divider font-medium text-lg shadow hover:bg-button-hover transition-all duration-300 text-primary"
           >

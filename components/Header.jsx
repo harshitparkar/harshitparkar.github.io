@@ -26,7 +26,7 @@ export default function Header({ onNav }) {
     }
   }
 
-  const items = ['home', 'about', 'worked-with', 'tech', 'projects', 'contact'];
+  const items = ['home', 'about', 'trusted-by', 'tech', 'projects', 'contact'];
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 backdrop-blur-md bg-header border-b border-divider">
@@ -35,13 +35,20 @@ export default function Header({ onNav }) {
         style={{ height: 72 }}
       >
         {/* Name on the left */}
-        <div>
-          <h1 className="text-xl font-semibold tracking-tight text-primary">
-            Harshit S. Parkar
-          </h1>
-          <p className="text-xs text-secondary">
-            Senior Software Engineer · React Native · Next.js
-          </p>
+        <div className="flex items-center gap-3">
+          <img
+            src="/assets/header-logo.png"
+            alt="Logo"
+            className={`w-10 h-10 object-contain transition-all duration-300 ${theme === 'light' ? 'invert' : ''}`}
+          />
+          <div>
+            <h1 className="text-xl font-semibold tracking-tight text-primary">
+              Harshit S. Parkar
+            </h1>
+            <p className="text-xs text-secondary">
+              Senior Software Engineer · React Native · Next.js
+            </p>
+          </div>
         </div>
 
         <div className="flex items-center gap-6">
@@ -52,7 +59,7 @@ export default function Header({ onNav }) {
                 key={id}
                 href={`#${id}`}
                 onClick={(e) => handleNavClick(e, id)}
-                className="text-sm transition-opacity duration-200 hover:underline capitalize text-secondary hover:text-primary"
+                className="text-sm capitalize text-secondary transition-all duration-300 hover:text-primary bg-gradient-to-r from-cyan-500 to-blue-500 bg-[length:0%_1px] bg-no-repeat bg-left-bottom hover:bg-[length:100%_1px] pb-1 px-2"
               >
                 {id.replace('-', ' ')}
               </a>
