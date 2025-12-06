@@ -36,7 +36,7 @@ export default function Hero({ onNav }) {
             Let's Work Together
           </a>
           <a
-            href="/Harshit_Parkar_Resume.pdf"
+            href="/assets/Harshit_Parkar_Resume.pdf"
             download
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass border border-divider font-medium text-lg shadow hover:bg-button-hover transition-all duration-300 text-primary"
           >
