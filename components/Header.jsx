@@ -35,13 +35,20 @@ export default function Header({ onNav }) {
         style={{ height: 72 }}
       >
         {/* Name on the left */}
-        <div>
-          <h1 className="text-xl font-semibold tracking-tight text-primary">
-            Harshit S. Parkar
-          </h1>
-          <p className="text-xs text-secondary">
-            Senior Software Engineer · React Native · Next.js
-          </p>
+        <div className="flex items-center gap-3">
+          <img
+            src="/assets/header-logo.png"
+            alt="Logo"
+            className={`w-10 h-10 object-contain transition-all duration-300 ${theme === 'light' ? 'invert' : ''}`}
+          />
+          <div>
+            <h1 className="text-xl font-semibold tracking-tight text-primary">
+              Harshit S. Parkar
+            </h1>
+            <p className="text-xs text-secondary">
+              Senior Software Engineer · React Native · Next.js
+            </p>
+          </div>
         </div>
 
         <div className="flex items-center gap-6">
