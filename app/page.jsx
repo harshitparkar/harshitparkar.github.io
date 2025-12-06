@@ -4,7 +4,7 @@ import Cursor from '../components/Cursor';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import About from '../components/About';
-import WorkedWith from '../components/WorkedWith';
+import TrustedBy from '../components/TrustedBy';
 import TechStack from '../components/TechStack';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
@@ -30,7 +30,7 @@ export default function Page() {
       <main id="home" className="pt-16 w-full px-3 md:px-4 lg:px-5">
         <Hero onNav={scrollToId} />
         <About />
-        <WorkedWith />
+        <TrustedBy />
         <TechStack />
         <Projects />
         <Contact />
