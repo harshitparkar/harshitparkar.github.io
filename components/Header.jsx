@@ -59,7 +59,7 @@ export default function Header({ onNav }) {
                 key={id}
                 href={`#${id}`}
                 onClick={(e) => handleNavClick(e, id)}
-                className="text-sm transition-opacity duration-200 hover:underline capitalize text-secondary hover:text-primary"
+                className="text-sm capitalize text-secondary transition-all duration-300 hover:text-primary bg-gradient-to-r from-cyan-500 to-blue-500 bg-[length:0%_1px] bg-no-repeat bg-left-bottom hover:bg-[length:100%_1px] pb-1 px-2"
               >
                 {id.replace('-', ' ')}
               </a>
