@@ -51,7 +51,7 @@ html.light {
   --bg-end: #cbd5e1;
   --text-primary: #0f172a;
   --text-secondary: #475569;
-  --glass-bg: rgba(0, 0, 0, 0.02);
+  --glass-bg: rgba(0, 0, 0, 0.03);
   --header-bg: rgba(255, 255, 255, 0.7);
   --divider: rgba(0, 0, 0, 0.1);
   --button-bg: rgba(0, 0, 0, 0.05);
@@ -60,9 +60,17 @@ html.light {
 
 /* Animations */
 @keyframes floatY {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* Base Styles & Utilities */
@@ -90,9 +98,26 @@ html.light {
   background: linear-gradient(to bottom, var(--bg-start), var(--bg-mid), var(--bg-end));
 }
 
-.text-primary { color: var(--text-primary); }
-.text-secondary { color: var(--text-secondary); }
-.bg-header { background: var(--header-bg); }
-.border-divider { border-color: var(--divider); }
-.bg-button-bg { background: var(--button-bg); }
-.bg-button-hover { background: var(--button-hover); }
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.bg-header {
+  background: var(--header-bg);
+}
+
+.border-divider {
+  border-color: var(--divider);
+}
+
+.bg-button-bg {
+  background: var(--button-bg);
+}
+
+.bg-button-hover {
+  background: var(--button-hover);
+}
