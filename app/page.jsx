@@ -8,6 +8,7 @@ import TrustedBy from '../components/TrustedBy';
 import TechStack from '../components/TechStack';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
+import Awards from '../components/Awards';
 
 export default function Page() {
   function scrollToId(id) {
@@ -30,6 +31,7 @@ export default function Page() {
       <main id="home" className="pt-16 w-full px-3 md:px-4 lg:px-5">
         <Hero onNav={scrollToId} />
         <About />
+        <Awards />
         <TrustedBy />
         <TechStack />
         <Projects />
