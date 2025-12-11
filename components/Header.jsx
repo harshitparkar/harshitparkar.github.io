@@ -26,7 +26,7 @@ export default function Header({ onNav }) {
     }
   }
 
-  const items = ['home', 'about', 'experience', 'awards', 'trusted-by', 'tech', 'projects', 'contact'];
+  const items = ['home', 'experience', 'awards', 'trusted-by', 'tech', 'projects', 'contact'];
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 backdrop-blur-md bg-header border-b border-divider">

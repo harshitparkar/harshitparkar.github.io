@@ -1,11 +1,11 @@
 'use client';
 import React from 'react';
 import Cursor from '../components/Cursor';
-import Background from '../components/Background';
+
 import SectionDivider from '../components/SectionDivider';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
-import About from '../components/About';
+
 import TrustedBy from '../components/TrustedBy';
 
 import TechStack from '../components/TechStack';
@@ -32,15 +32,10 @@ export default function Page() {
 
       <Cursor />
       <Header onNav={scrollToId} />
-      {/* Dynamic Background */}
-      <Background />
+
 
       <main id="home" className="pt-16 w-full px-3 md:px-4 lg:px-5 relative z-0">
         <Hero onNav={scrollToId} />
-
-        <SectionDivider />
-        <About />
-
         <SectionDivider />
         <Experience />
 
