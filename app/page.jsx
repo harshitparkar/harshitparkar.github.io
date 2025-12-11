@@ -40,13 +40,13 @@ export default function Page() {
         <Experience />
 
         <SectionDivider />
-        <Awards />
+        <TrustedBy />
 
         <SectionDivider />
         <TechStack />
 
         <SectionDivider />
-        <TrustedBy />
+        <Awards />
 
         <SectionDivider />
         <Projects />
