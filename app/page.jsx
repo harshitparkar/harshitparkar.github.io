@@ -1,6 +1,8 @@
 'use client';
 import React from 'react';
 import Cursor from '../components/Cursor';
+import Background from '../components/Background';
+import SectionDivider from '../components/SectionDivider';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import About from '../components/About';
@@ -30,15 +32,31 @@ export default function Page() {
 
       <Cursor />
       <Header onNav={scrollToId} />
-      <main id="home" className="pt-16 w-full px-3 md:px-4 lg:px-5">
+      {/* Dynamic Background */}
+      <Background />
+
+      <main id="home" className="pt-16 w-full px-3 md:px-4 lg:px-5 relative z-0">
         <Hero onNav={scrollToId} />
+
+        <SectionDivider />
         <About />
-        <Awards />
+
+        <SectionDivider />
         <Experience />
+
+        <SectionDivider />
+        <Awards />
+
+        <SectionDivider />
+        <TechStack />
+
+        <SectionDivider />
         <TrustedBy />
 
-        <TechStack />
+        <SectionDivider />
         <Projects />
+
+        <SectionDivider />
         <Contact />
       </main>
       <footer className="py-4 text-center text-secondary text-sm">© {new Date().getFullYear()} Harshit S. Parkar — Built with React & Tailwind</footer>

@@ -95,7 +95,7 @@ html.light {
 
 /* Theme Utility Classes */
 .bg-background {
-  background: linear-gradient(to bottom, var(--bg-start), var(--bg-mid), var(--bg-end));
+  /* background: linear-gradient(to bottom, var(--bg-start), var(--bg-mid), var(--bg-end)); */
 }
 
 .text-primary {
