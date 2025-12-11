@@ -100,15 +100,7 @@ export default function Awards() {
                     ))}
                 </div>
 
-                {/* Bottom Decorative Element */}
-                <div className="mt-12 flex justify-center">
-                    <div className="flex items-center gap-2 px-6 py-3 glass rounded-full border border-divider">
-                        <span className="text-2xl">✨</span>
-                        <span className="text-secondary text-sm font-medium">
-                            {awards.length} Award{awards.length !== 1 ? 's' : ''} Earned
-                        </span>
-                    </div>
-                </div>
+
             </div>
         </section>
     );

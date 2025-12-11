@@ -92,26 +92,7 @@ export default function Experience() {
                     {/* Right Gradient Fade */}
                     <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[var(--bg-mid)] to-transparent z-10 pointer-events-none" />
 
-                    {/* Scroll Buttons */}
-                    <button
-                        onClick={() => scroll('left')}
-                        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-button-bg hover:bg-button-hover border border-divider flex items-center justify-center transition-all duration-300 hover:scale-110"
-                        aria-label="Scroll left"
-                    >
-                        <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
 
-                    <button
-                        onClick={() => scroll('right')}
-                        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-button-bg hover:bg-button-hover border border-divider flex items-center justify-center transition-all duration-300 hover:scale-110"
-                        aria-label="Scroll right"
-                    >
-                        <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
 
                     {/* Scrollable Timeline */}
                     <div
@@ -205,18 +186,7 @@ export default function Experience() {
                         </div>
                     </div>
 
-                    {/* Scroll Hint */}
-                    <div className="text-center ">
-                        <p className="text-xs text-secondary flex items-center justify-center gap-2">
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
-                            </svg>
-                            <span>Scroll or use arrows to explore timeline</span>
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </p>
-                    </div>
+
                 </div>
             </div>
         </section>
