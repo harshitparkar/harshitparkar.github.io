@@ -34,25 +34,52 @@ export default function Page() {
       <Header onNav={scrollToId} />
 
 
-      <main id="home" className="pt-16 w-full px-3 md:px-4 lg:px-5 relative z-0">
-        <Hero onNav={scrollToId} />
-        <SectionDivider />
-        <Experience />
+      <main id="home" className="pt-16 w-full relative z-0">
+        <div className="px-3 md:px-4 lg:px-5">
+          <Hero onNav={scrollToId} />
+        </div>
 
         <SectionDivider />
-        <TrustedBy />
+
+        <div className="bg-primary/5 dark:bg-white/5 py-8 section-alt">
+          <div className="px-3 md:px-4 lg:px-5">
+            <Experience />
+          </div>
+        </div>
 
         <SectionDivider />
-        <TechStack />
+
+        <div className="px-3 md:px-4 lg:px-5 py-8">
+          <TrustedBy />
+        </div>
 
         <SectionDivider />
-        <Awards />
+
+        <div className="bg-primary/5 dark:bg-white/5 py-8 section-alt">
+          <div className="px-3 md:px-4 lg:px-5">
+            <TechStack />
+          </div>
+        </div>
 
         <SectionDivider />
-        <Projects />
+
+        <div className="px-3 md:px-4 lg:px-5 py-8">
+          <Awards />
+        </div>
 
         <SectionDivider />
-        <Contact />
+
+        <div className="bg-primary/5 dark:bg-white/5 py-8 section-alt">
+          <div className="px-3 md:px-4 lg:px-5">
+            <Projects />
+          </div>
+        </div>
+
+        <SectionDivider />
+
+        <div className="px-3 md:px-4 lg:px-5 py-8">
+          <Contact />
+        </div>
       </main>
       <footer className="py-4 text-center text-secondary text-sm">© {new Date().getFullYear()} Harshit S. Parkar — Built with React & Tailwind</footer>
     </div>

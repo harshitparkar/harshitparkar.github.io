@@ -5,12 +5,14 @@ import StatCard from './StatCard';
 
 import { PROFILE_CONFIG } from '../data/profileConfig';
 
+import InteractiveBackground from './InteractiveBackground';
+
 export default function Hero({ onNav }) {
   const { isAvailable } = PROFILE_CONFIG;
   return (
-    <section className="max-w-7xl mx-auto section-pad relative">
-
-      <div className="text-center max-w-5xl mx-auto">
+    <section className="max-w-7xl mx-auto section-pad relative overflow-hidden">
+      <InteractiveBackground />
+      <div className="text-center max-w-5xl mx-auto relative z-10">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-divider mb-6 hover:bg-white/5 transition-colors">
           <span className="relative flex h-2 w-2">
             <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${isAvailable ? 'bg-green-400' : 'bg-blue-400'}`}></span>
