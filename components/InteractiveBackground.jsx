@@ -165,4 +165,6 @@ export default function InteractiveBackground() {
         <canvas
             ref={canvasRef}
             className="absolute inset-0 z-0 opacity-80 pointer-events-auto"
-   
+        />
+    );
+}
