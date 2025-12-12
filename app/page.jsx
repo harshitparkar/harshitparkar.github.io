@@ -14,13 +14,7 @@ import Experience from '../components/Experience';
 
 import {
   FloatingOrbs,
-  MatrixGrid,
-  GeometricShapes,
-  ParticleField,
-  WavePattern,
-  CircuitPattern,
-  GradientMesh,
-  Sparkles
+  ParticleField
 } from '../components/AnimatedBackground';
 
 export default function Page() {

@@ -30,19 +30,18 @@ export default function Awards() {
                                 className={`absolute inset-0 rounded-[20px] bg-gradient-to-br ${award.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
                             />
 
-                            {/* Icon Badge */}
-                            <div className="relative mb-4">
-                                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br ${award.color} text-white text-3xl shadow-lg transform transition-transform duration-500 ${hoveredId === award.id ? 'scale-110 rotate-12' : ''}`}>
+                            {/* Icon & Title Row */}
+                            <div className="relative flex items-center gap-4 mb-4">
+                                <div className={`flex-shrink-0 inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br ${award.color} text-white text-3xl shadow-lg transform transition-transform duration-500 ${hoveredId === award.id ? 'scale-110 rotate-12' : ''}`}>
                                     {award.icon}
                                 </div>
+                                <h3 className="text-xl font-bold text-primary leading-tight flex-1">
+                                    {award.title}
+                                </h3>
                             </div>
 
                             {/* Content */}
                             <div className="relative">
-                                <h3 className="text-xl font-bold text-primary mb-3 leading-tight">
-                                    {award.title}
-                                </h3>
-
                                 <div className="space-y-2 mb-4">
                                     <div className="flex items-start gap-2">
                                         <span className="text-secondary text-sm">📋</span>
@@ -99,9 +98,7 @@ export default function Awards() {
                         </div>
                     ))}
                 </div>
-
-
             </div>
-        </section>
+        </section >
     );
 }
