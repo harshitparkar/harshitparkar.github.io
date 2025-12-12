@@ -52,37 +52,33 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Experience Section - Matrix Grid */}
+        {/* Experience Section */}
         <div className="relative py-8 overflow-hidden">
-          <MatrixGrid color="rgba(6, 182, 212, 0.3)" />
-          <CircuitPattern color="#06b6d4" />
+          <ParticleField particleColor="rgba(6, 182, 212, 0.5)" particleCount={30} />
           <div className="relative z-10 px-3 md:px-4 lg:px-5">
             <Experience />
           </div>
         </div>
 
-        {/* Trusted By Section - Particle Field */}
+        {/* Trusted By Section */}
         <div className="relative px-3 md:px-4 lg:px-5 py-8 overflow-hidden">
-          <ParticleField particleColor="rgba(251, 146, 60, 0.6)" particleCount={40} />
-          <GradientMesh colors={['rgba(251, 146, 60, 0.3)', 'rgba(249, 115, 22, 0.3)', 'rgba(234, 88, 12, 0.3)']} />
+          <ParticleField particleColor="rgba(251, 146, 60, 0.5)" particleCount={30} />
           <div className="relative z-10">
             <TrustedBy />
           </div>
         </div>
 
-        {/* Tech Stack Section - Geometric Shapes */}
+        {/* Tech Stack Section */}
         <div className="relative py-8 overflow-hidden">
-          <GeometricShapes colors={['rgba(168, 85, 247, 0.5)', 'rgba(236, 72, 153, 0.5)', 'rgba(219, 39, 119, 0.5)']} />
-          <FloatingOrbs color1="rgba(168, 85, 247, 0.3)" color2="rgba(236, 72, 153, 0.3)" count={4} />
+          <ParticleField particleColor="rgba(168, 85, 247, 0.5)" particleCount={30} />
           <div className="relative z-10 px-3 md:px-4 lg:px-5">
             <TechStack />
           </div>
         </div>
 
-        {/* Awards Section - Sparkles */}
+        {/* Awards Section */}
         <div className="relative px-3 md:px-4 lg:px-5 py-8 overflow-hidden">
-          <Sparkles color="#22c55e" count={25} />
-          <GradientMesh colors={['rgba(34, 197, 94, 0.2)', 'rgba(16, 185, 129, 0.2)', 'rgba(5, 150, 105, 0.2)']} />
+          <ParticleField particleColor="rgba(34, 197, 94, 0.5)" particleCount={30} />
           <div className="relative z-10">
             <Awards />
           </div>
@@ -96,10 +92,9 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Contact Section - Gradient Mesh */}
+        {/* Contact Section */}
         <div className="relative px-3 md:px-4 lg:px-5 py-8 overflow-hidden">
-          <GradientMesh colors={['rgba(99, 102, 241, 0.3)', 'rgba(139, 92, 246, 0.3)', 'rgba(167, 139, 250, 0.3)']} />
-          <FloatingOrbs color1="rgba(99, 102, 241, 0.3)" color2="rgba(139, 92, 246, 0.3)" count={5} />
+          <ParticleField particleColor="rgba(99, 102, 241, 0.5)" particleCount={30} />
           <div className="relative z-10">
             <Contact />
           </div>
