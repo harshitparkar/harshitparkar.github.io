@@ -1,13 +1,19 @@
+'use client';
 import React from 'react';
 import LogoCarousel from './LogoCarousel';
 
 export default function TrustedBy() {
-  return (
-    <section id="trusted-by" className="section-pad">
-      <div className="max-w-6xl mx-auto glass rounded-[15px] p-4 border border-divider">
-        <h3 className="text-2xl font-semibold mb-4 text-primary">Trusted By</h3>
-        <LogoCarousel />
-      </div>
-    </section>
-  );
+    return (
+        <section id="trusted-by" className="section-pad">
+            <div className="max-w-7xl mx-auto px-4 text-center">
+                <h3 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
+                    Trusted by
+                </h3>
+                <p className="text-secondary text-lg mb-12 max-w-2xl mx-auto">
+                    Collaborating with visionary companies to build impactful solutions
+                </p>
+                <LogoCarousel />
+            </div>
+        </section>
+    );
 }

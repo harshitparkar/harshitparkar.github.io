@@ -1,16 +1,18 @@
 'use client';
 import React from 'react';
-import ParticleField from './ParticleField';
+
 import StatCard from './StatCard';
 
 import { PROFILE_CONFIG } from '../data/profileConfig';
 
+import InteractiveBackground from './InteractiveBackground';
+
 export default function Hero({ onNav }) {
   const { isAvailable } = PROFILE_CONFIG;
   return (
-    <section className="max-w-6xl mx-auto section-pad relative">
-      <div className="absolute inset-0 -z-10"><ParticleField /></div>
-      <div className="text-center max-w-4xl mx-auto">
+    <section className="max-w-7xl mx-auto section-pad relative overflow-hidden">
+      <InteractiveBackground />
+      <div className="text-center max-w-5xl mx-auto relative z-10">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-divider mb-6 hover:bg-white/5 transition-colors">
           <span className="relative flex h-2 w-2">
             <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${isAvailable ? 'bg-green-400' : 'bg-blue-400'}`}></span>
@@ -30,9 +32,10 @@ export default function Hero({ onNav }) {
           & product-first code
         </h1>
 
-        <p className="mt-6 text-lg md:text-xl text-secondary max-w-3xl mx-auto leading-relaxed">
-          I build high-performance React Native apps and beautiful web frontends in Next.js.
-          I focus on scalability, animations, and product thinking — shipping features that users love.
+        <p className="mt-8 text-lg md:text-xl text-secondary max-w-4xl mx-auto leading-relaxed">
+          I'm a Senior Software Engineer focused on building performant mobile applications and elegant web interfaces.
+          I mentor teams, design scalable architecture and drive product decisions. I enjoy crafting delightful UI,
+          performance optimizations, and integrating AI features to solve real business problems.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-4 justify-center">
