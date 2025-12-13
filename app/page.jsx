@@ -17,18 +17,23 @@ import {
   ParticleField
 } from '../components/AnimatedBackground';
 
+
 export default function Page() {
-  function scrollToId(id) {
+  // Simple, reliable scroll handler
+  const scrollToId = React.useCallback((id) => {
     const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+    if (!el) {
+      console.warn(`Element with id "${id}" not found`);
       return;
     }
-    // Fallback if element not found (e.g. if id='home' was missing)
-    if (id === 'home') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  }
+
+    // Home: align to top with scroll-margin offset
+    // Other sections: center in viewport
+    el.scrollIntoView({
+      behavior: 'smooth',
+      block: id === 'home' ? 'start' : 'center'
+    });
+  }, []);
 
   return (
     <div className="min-h-screen bg-background text-primary antialiased overflow-x-hidden transition-colors duration-300">
@@ -37,9 +42,9 @@ export default function Page() {
       <Header onNav={scrollToId} />
 
 
-      <main id="home" className="pt-16 w-full relative z-0">
+      <main className="pt-10 w-full relative z-0">
         {/* Hero Section - Floating Orbs */}
-        <div className="relative px-3 md:px-4 lg:px-5 overflow-hidden">
+        <div id="home" className="relative px-3 md:px-4 lg:px-5 overflow-hidden section-pad">
           <FloatingOrbs color1="rgba(59, 130, 246, 0.4)" color2="rgba(147, 51, 234, 0.4)" count={6} />
           <div className="relative z-10">
             <Hero onNav={scrollToId} />
