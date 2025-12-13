@@ -73,7 +73,7 @@ export default function Projects() {
     <section id="projects" className="section-pad">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-6">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             Projects & Case Studies
           </h2>
@@ -106,17 +106,36 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {activeTab === 'professional'
-            ? professionalProjects.map(project => (
-              <ProjectCard key={project.id} project={project} type="professional" />
-            ))
-            : collegeProjects.map(project => (
-              <ProjectCard key={project.id} project={project} type="college" />
-            ))
-          }
+        {/* Projects Horizontal Scroll */}
+        <div className="relative -mx-3 md:-mx-4 lg:-mx-5">
+          <div
+            className="flex gap-6 overflow-x-auto px-3 md:px-4 lg:px-5 pb-4 scroll-smooth"
+            style={{
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none'
+            }}
+          >
+            {activeTab === 'professional'
+              ? professionalProjects.map(project => (
+                <div key={project.id} className="flex-none w-[85vw] md:w-[45vw] lg:w-[30vw]">
+                  <ProjectCard project={project} type="professional" />
+                </div>
+              ))
+              : collegeProjects.map(project => (
+                <div key={project.id} className="flex-none w-[85vw] md:w-[45vw] lg:w-[30vw]">
+                  <ProjectCard project={project} type="college" />
+                </div>
+              ))
+            }
+          </div>
         </div>
+
+        {/* Custom Scrollbar Styles - Hide scrollbar */}
+        <style jsx>{`
+          div::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
 
       </div>
     </section>
