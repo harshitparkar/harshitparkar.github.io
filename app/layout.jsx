@@ -15,10 +15,10 @@ export const metadata = {
     siteName: 'Harshit Parkar Portfolio',
     images: [
       {
-        url: '/assets/header-logo.png',
-        width: 800,
-        height: 600,
-        alt: 'Harshit Parkar Logo',
+        url: '/assets/og-preview.png',
+        width: 1200,
+        height: 630,
+        alt: 'Harshit Parkar Portfolio',
       },
     ],
     locale: 'en_US',
@@ -28,7 +28,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Harshit Parkar — Portfolio',
     description: 'Senior Software Engineer — React Native, Next.js, animations',
-    images: ['/assets/header-logo.png'],
+    images: ['/assets/og-preview.png'],
   },
 }
 
