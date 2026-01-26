@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { collegeProjects, professionalProjects } from '../data/projects';
 
 // Project Card Component
@@ -68,6 +68,36 @@ function ProjectCard({ project, type }) {
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState('professional');
+  const scrollContainerRef = useRef(null);
+
+  // Mouse drag scrolling state
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  // Mouse drag handlers
+  const handleMouseDown = (e) => {
+    if (!scrollContainerRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
+    setScrollLeft(scrollContainerRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging || !scrollContainerRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollContainerRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // Multiply by 2 for faster scrolling
+    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+  };
 
   return (
     <section id="projects" className="section-pad">
@@ -109,11 +139,18 @@ export default function Projects() {
         {/* Projects Horizontal Scroll */}
         <div className="relative -mx-3 md:-mx-4 lg:-mx-5">
           <div
+            ref={scrollContainerRef}
             className="flex gap-6 overflow-x-auto px-3 md:px-4 lg:px-5 pb-4 scroll-smooth"
             style={{
               scrollbarWidth: 'none',
-              msOverflowStyle: 'none'
+              msOverflowStyle: 'none',
+              cursor: isDragging ? 'grabbing' : 'grab',
+              userSelect: isDragging ? 'none' : 'auto'
             }}
+            onMouseDown={handleMouseDown}
+            onMouseLeave={handleMouseLeave}
+            onMouseUp={handleMouseUp}
+            onMouseMove={handleMouseMove}
           >
             {activeTab === 'professional'
               ? professionalProjects.map(project => (

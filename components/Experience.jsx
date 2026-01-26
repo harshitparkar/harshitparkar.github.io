@@ -7,6 +7,11 @@ export default function Experience() {
     const sectionRef = useRef(null);
     const hasAnimated = useRef(false);
 
+    // Mouse drag scrolling state
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
+
     const scroll = (direction) => {
         if (scrollContainerRef.current) {
             const scrollAmount = 400;
@@ -15,6 +20,30 @@ export default function Experience() {
                 behavior: 'smooth'
             });
         }
+    };
+
+    // Mouse drag handlers
+    const handleMouseDown = (e) => {
+        if (!scrollContainerRef.current) return;
+        setIsDragging(true);
+        setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
+        setScrollLeft(scrollContainerRef.current.scrollLeft);
+    };
+
+    const handleMouseLeave = () => {
+        setIsDragging(false);
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+    };
+
+    const handleMouseMove = (e) => {
+        if (!isDragging || !scrollContainerRef.current) return;
+        e.preventDefault();
+        const x = e.pageX - scrollContainerRef.current.offsetLeft;
+        const walk = (x - startX) * 2; // Multiply by 2 for faster scrolling
+        scrollContainerRef.current.scrollLeft = scrollLeft - walk;
     };
 
     useEffect(() => {
@@ -94,7 +123,16 @@ export default function Experience() {
                     <div
                         ref={scrollContainerRef}
                         className="overflow-x-auto overflow-y-visible pb-8 pt-4 px-[2%]"
-                        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                        style={{
+                            scrollbarWidth: 'none',
+                            msOverflowStyle: 'none',
+                            cursor: isDragging ? 'grabbing' : 'grab',
+                            userSelect: isDragging ? 'none' : 'auto'
+                        }}
+                        onMouseDown={handleMouseDown}
+                        onMouseLeave={handleMouseLeave}
+                        onMouseUp={handleMouseUp}
+                        onMouseMove={handleMouseMove}
                     >
                         <style jsx>{`
                             div::-webkit-scrollbar {
