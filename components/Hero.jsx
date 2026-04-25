@@ -1,77 +1,117 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
 
-import StatCard from './StatCard';
+const EASE = [0.76, 0, 0.24, 1];
 
-import { PROFILE_CONFIG } from '../data/profileConfig';
+export default function Hero() {
+  const nameLines = ["Harshit S.", "Parkar"];
 
-import InteractiveBackground from './InteractiveBackground';
-
-export default function Hero({ onNav }) {
-  const { isAvailable } = PROFILE_CONFIG;
   return (
-    <section className="max-w-7xl mx-auto section-pad relative overflow-hidden">
-      <InteractiveBackground />
-      <div className="text-center max-w-5xl mx-auto relative z-10">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-divider mb-6 hover:bg-white/5 transition-colors">
-          <span className="relative flex h-2 w-2">
-            <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${isAvailable ? 'bg-green-400' : 'bg-blue-400'}`}></span>
-            <span className={`relative inline-flex rounded-full h-2 w-2 ${isAvailable ? 'bg-green-500' : 'bg-blue-500'}`}></span>
-          </span>
-          <span className="text-sm text-secondary">
-            {isAvailable ? 'Available for new opportunities' : `Currently working with ${PROFILE_CONFIG.currentCompany}`}
-          </span>
+    <section id="hero" className="relative w-full h-screen min-h-[800px] flex items-center bg-obsidian overflow-hidden section-dark">
+      {/* Background radial gold bloom */}
+      <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 gold-bloom" />
+
+      <div className="max-w-[1600px] mx-auto w-full px-6 md:px-12 flex flex-col md:flex-row items-center justify-between z-10 relative">
+        
+        {/* Left Column (60%) */}
+        <div className="w-full md:w-[60%] flex flex-col justify-center">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, ease: EASE, delay: 0.2 }}
+            className="font-mono text-gold text-[12px] mb-8 tracking-widest uppercase"
+          >
+            HP Wordmark
+          </motion.div>
+
+          <h1 className="font-display text-[60px] md:text-[80px] lg:text-[100px] leading-[1.05] tracking-display text-bone mb-6">
+            {nameLines.map((line, i) => (
+              <div key={i} className="overflow-hidden pb-2">
+                <motion.div
+                  initial={{ y: 100 }}
+                  animate={{ y: 0 }}
+                  transition={{ duration: 0.9, ease: EASE, delay: 1.6 + i * 0.12 }}
+                >
+                  {line}
+                </motion.div>
+              </div>
+            ))}
+          </h1>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4, ease: EASE, delay: 1.6 + (nameLines.length * 0.12) + 0.5 }}
+            className="font-mono text-[11px] text-ash tracking-mono-wide uppercase mb-10"
+          >
+            Since 1998
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, ease: EASE, delay: 1.6 + (nameLines.length * 0.12) + 0.8 }}
+            className="font-sans text-[16px] text-bone font-light mb-12 max-w-xl leading-relaxed"
+          >
+            Senior React Native Engineer · Mumbai · London
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: EASE, delay: 1.6 + (nameLines.length * 0.12) + 1.0 }}
+            className="flex items-center gap-8"
+          >
+            <a href="#work" className="cta-button">
+              View Work →
+            </a>
+            <a href="#contact" className="cta-text-link">
+              Get In Touch
+            </a>
+          </motion.div>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-primary">
-          Designing delightful mobile{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-indigo-500 animate-gradient">
-            experiences
-          </span>
-          <br />
-          & product-first code
-        </h1>
-
-        <p className="mt-8 text-lg md:text-xl text-secondary max-w-4xl mx-auto leading-relaxed">
-          I'm a Senior Software Engineer focused on building performant mobile applications and elegant web interfaces.
-          I mentor teams, design scalable architecture and drive product decisions. I enjoy crafting delightful UI,
-          performance optimizations, and integrating AI features to solve real business problems.
-        </p>
-
-        <div className="mt-8 flex flex-wrap gap-4 justify-center">
-          <a
-            href="#contact"
-            onClick={(e) => { e.preventDefault(); onNav('contact'); }}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 font-semibold text-lg shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
+        {/* Right Column (40%) - Device Mockup */}
+        <div className="hidden md:flex w-[40%] justify-end perspective-[1200px]">
+          <motion.div
+            initial={{ opacity: 0, rotateY: 15, rotateX: 5, z: -100 }}
+            animate={{ opacity: 1, rotateY: -15, rotateX: 5, z: 0 }}
+            transition={{ duration: 1.5, ease: EASE, delay: 2.0 }}
+            className="relative animate-float"
+            style={{ transformStyle: 'preserve-3d' }}
           >
-            Let's Work Together
-          </a>
-          <a
-            href="/assets/Harshit_Parkar_Resume.pdf"
-            download
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass border border-divider font-medium text-lg shadow hover:bg-button-hover transition-all duration-300 text-primary"
-          >
-            Download Resume
-          </a>
-        </div>
-
-        <div className="mt-10 flex gap-4 flex-wrap justify-center">
-          <StatCard title="Experience" value="6+ yrs" />
-          <StatCard title="Focus" value="React Native" />
-          <StatCard title="Open to" value="Senior Roles" />
+            {/* CSS iPhone Frame */}
+            <div className="w-[320px] h-[650px] bg-deep-void rounded-[45px] border-[8px] border-[#222] shadow-2xl relative overflow-hidden flex items-center justify-center">
+              {/* Dynamic Island */}
+              <div className="absolute top-2 left-1/2 -translate-x-1/2 w-[100px] h-[30px] bg-black rounded-full z-20"></div>
+              {/* Screen Content - A subtle premium abstract visual */}
+              <div className="w-full h-full bg-obsidian flex items-center justify-center relative">
+                 <div className="absolute top-0 left-0 w-full h-full opacity-30"
+                      style={{
+                        background: 'radial-gradient(circle at 50% 0%, #c9a96e 0%, transparent 60%)'
+                      }}
+                 />
+                 <div className="font-display text-4xl text-bone opacity-80">HP</div>
+              </div>
+            </div>
+            {/* Soft shadow below phone */}
+            <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[200px] h-[20px] bg-black/40 blur-xl rounded-[100%]"></div>
+          </motion.div>
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes gradient {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-        .animate-gradient {
-          background-size: 200% 200%;
-          animation: gradient 3s ease infinite;
-        }
-      `}</style>
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 3.5, duration: 1 }}
+        className="scroll-indicator hidden md:block"
+      >
+        <div className="scroll-line">
+          <div className="scroll-dot"></div>
+        </div>
+      </motion.div>
     </section>
   );
 }
